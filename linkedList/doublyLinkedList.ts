@@ -1,7 +1,7 @@
-class DoubleListNode {
+class DoublyListNode {
   value: any
-  next: DoubleListNode | null
-  prev: DoubleListNode | null
+  next: DoublyListNode | null
+  prev: DoublyListNode | null
 
     constructor(value) {
       this.value = value
@@ -11,8 +11,8 @@ class DoubleListNode {
   }
   
   class DoublyLinkedList {
-    head: DoubleListNode
-    tail: DoubleListNode
+    head: DoublyListNode
+    tail: DoublyListNode
 
     constructor() {
       this.head = null
@@ -21,7 +21,7 @@ class DoubleListNode {
   
     addToBack(value: any): void {
       const prevNode = this.tail
-      const newNode = new DoubleListNode(value)
+      const newNode = new DoublyListNode(value)
         
       if(this.head === null) {
         this.head = newNode
@@ -36,7 +36,7 @@ class DoubleListNode {
   
     addToFront(value: any): void {
       const head = this.head
-      const newNode = new DoubleListNode(value)
+      const newNode = new DoublyListNode(value)
         
       head.prev = newNode
       this.head = newNode
@@ -49,7 +49,7 @@ class DoubleListNode {
         return;
       }
   
-      const newNode = new DoubleListNode(data)
+      const newNode = new DoublyListNode(data)
         
       let head = this.head
       let next = head.next
@@ -94,10 +94,8 @@ class DoubleListNode {
   linkedList.addToBack(5)
   linkedList.addToFront(0)
   linkedList.addToFront(-1)
-  // console.log(linkedList.tail.value)
   linkedList.insertAt(0.5, 1)
   linkedList.insertAt(0.4, 1)
   linkedList.removeFromFront()
   linkedList.removeFromBack()
-  // console.log(JSON.stringify(linkedList))
   linkedList.printLinkedList()

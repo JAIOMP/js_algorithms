@@ -1,0 +1,8 @@
+{
+    "exclude": [
+      "typings/browser.d.ts",
+      "typings/browser",
+      "lib.dom.d.ts",
+      "node_modules"
+    ]
+  }

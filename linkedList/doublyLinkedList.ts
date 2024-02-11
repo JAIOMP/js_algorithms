@@ -99,3 +99,5 @@ class DoublyListNode {
   linkedList.removeFromFront()
   linkedList.removeFromBack()
   linkedList.printLinkedList()
+
+  export default DoublyLinkedList
